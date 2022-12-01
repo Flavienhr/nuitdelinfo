@@ -1,0 +1,9 @@
+#nav_dir{
+  width: 100%;
+  height: 20%;
+  background-color: red;
+}
+
+#nav_dir>span{
+  background-color: grey;
+}
