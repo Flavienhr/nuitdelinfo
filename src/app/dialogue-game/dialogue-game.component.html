@@ -13,10 +13,10 @@
 
 <div *ngIf="win&&!startScreen" class="dialogue">
   <h1>Le jeu est terminé</h1>
-  <p class="finalP1">Vous avez eu {{points}} sur 30.</p>
+  <p class="finalP1">Vous avez eu {{points}} sur 100.</p>
   <img id="check_img" src="../../assets/check.png">
-  <p *ngIf="points<10" class="finalP2">Vous encore encore plein de choses à apprendre !</p>
-  <p *ngIf="points>=10&&points<20" class="finalP2"> Continuez vos efforts !</p>
-  <p *ngIf="points>=20&&points<30" class="finalP2"> Vous êtes presque un expert !</p>
-  <p *ngIf="points==30" class="finalP2">Vous connaissez tout sur tout !</p>
+  <p *ngIf="points<33" class="finalP2">Vous encore encore plein de choses à apprendre !</p>
+  <p *ngIf="points>=33&&points<66" class="finalP2"> Continuez vos efforts !</p>
+  <p *ngIf="points>=66&&points<100" class="finalP2"> Vous êtes presque un expert !</p>
+  <p *ngIf="points==100" class="finalP2">Vous connaissez tout sur tout !</p>
 </div>
