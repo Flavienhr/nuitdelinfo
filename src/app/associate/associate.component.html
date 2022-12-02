@@ -10,12 +10,24 @@
     <app-card-associate *ngFor="let card of cardsList; let i = index" [titre]="card.titre" [image]="card.image" [isImage]="card.isImage" [display]="card.display" [halo]="card.halo" (oneCardClicked)="oneCardClicked(i)"></app-card-associate>
   </div>
 
-</section>
 <section *ngIf="!run && !win">
-  GAME OVER
+  <div class="loose">
+    <p>Malheuresement vous avez perdu, mais vous pouvez quand même retenter votre chance !</p>
+    <img src="../../assets/croix_rouge.png">
+    <div class="bouton_rejouer">
+      <a href="index.html">Rejouer</a>
+    </div>
+  </div>
 </section>
+
 <section *ngIf="!run && win">
-  GAGNE {{score}}
+  <div class="win">
+    <p>Bravo, vous avez fait un score de {{score}}, vous pouvez retourner à l'accueil</p>
+    <img src="../../assets/croix_rouge.png">
+    <div class="bouton_super">
+      <a href="#">Super !</a>
+    </div>
+  </div>
 </section>
 
 
