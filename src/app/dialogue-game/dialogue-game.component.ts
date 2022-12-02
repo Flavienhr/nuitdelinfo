@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DialogueGameComponent implements OnInit {
   win = false;
+  startScreen = true;
   questions = [
     ["TEST QUESTION 1","REPONSE 1", "REPONSE 2", 1],
     ["TEST QUESTION 2","REPONSE 1", "REPONSE 2", 1],
@@ -50,7 +51,6 @@ export class DialogueGameComponent implements OnInit {
   ngOnInit() {
     this.newQuestion(0);
   }
-
   newQuestion(i: number) {
    this.question = this.questions[i][0];
    this.firstAnswer = this.questions[i][1];
