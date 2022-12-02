@@ -1,9 +1,99 @@
-#nav_dir{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&display=swap');
+
+#nav_div{
+  margin: 0;
   width: 100%;
-  height: 20%;
-  background-color: red;
+  height: 75px;
+  font-family: Montserrat;
 }
 
-#nav_dir>span{
+#nav_div>table{
+  background-color: #F2B6D7;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  font-size: 14pt;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+a:hover{
+  color: #6da6d9;
+}
+
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #6da6d9;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+
+.progress_div{
+  padding-top: 7px;
+  height: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.progress_div>img{
+  height: 50px;
+}
+
+.progress_bar_back{
+  width: 80%;
+  margin: 10px auto;
+  height: 5px;
+  border-radius: 20px;
   background-color: grey;
+  border: 1px #24292e solid;
+}
+
+.progress_div_in{
+  --percentage: 0%;
+  width: var(--percentage);
+  height: 100%;
+  background-color: #6da6d9;
+  border-radius: 20px;
+}
+
+.progress_num {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 7%;
+  margin-top:28px;
+  height: 90px;
+  color: white;
+  transition: all 0.3s ease;
+  opacity: 0%;
+  transform: translateY(50px);
+}
+
+.progress_show:hover > .progress_num{
+  opacity: 100%;
+  transform: translateY(0px);
+}
+
+.progress_show:hover .progress_div{
+  filter: brightness(50%);
 }
