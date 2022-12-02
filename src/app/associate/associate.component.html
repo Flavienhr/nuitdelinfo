@@ -9,6 +9,7 @@
   <div style="display: grid; grid-template-columns: repeat(6, 170px);">
     <app-card-associate *ngFor="let card of cardsList; let i = index" [titre]="card.titre" [image]="card.image" [isImage]="card.isImage" [display]="card.display" [halo]="card.halo" (oneCardClicked)="oneCardClicked(i)"></app-card-associate>
   </div>
+</section>
 
 <section *ngIf="!run && !win">
   <div class="loose">
