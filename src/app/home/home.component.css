@@ -1,0 +1,21 @@
+h1{
+  text-align: center;
+  font-size: 30pt;
+  font-family: Verdana;
+}
+
+#home_div{
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+}
+
+h2{
+  font-size: 24pt;
+  font-family: Verdana;
+}
+
+#info_banner{
+  width: 100%;
+}
+
