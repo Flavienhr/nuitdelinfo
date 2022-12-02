@@ -1,10 +1,10 @@
 <h1 *ngIf="run" style="position:relative; left: 50%;font-size: 60px">{{timeLeft}}</h1>
 <section *ngIf="run" style="display:flex;justify-content: center; height: 550px">
 
-  <div class="vie" style="position:relative;display:block;left: -50px;top: 50%;">
-    <div *ngIf="life > 0">❤️</div>
-    <div *ngIf="life > 1">❤️</div>
-    <div *ngIf="life > 2">❤️</div>
+  <div class="vie" style="position:relative;display:block;left: -50px;top: 15%;">
+    <div *ngIf="life > 0" style="font-size: 100px">❤️</div>
+    <div *ngIf="life > 1" style="font-size: 100px">❤️</div>
+    <div *ngIf="life > 2" style="font-size: 100px">❤️</div>
   </div>
   <div style="display: grid; grid-template-columns: repeat(6, 170px);">
     <app-card-associate *ngFor="let card of cardsList; let i = index" [titre]="card.titre" [image]="card.image" [isImage]="card.isImage" [display]="card.display" [halo]="card.halo" (oneCardClicked)="oneCardClicked(i)"></app-card-associate>
