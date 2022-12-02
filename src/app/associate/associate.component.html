@@ -15,19 +15,12 @@
   <div class="loose">
     <p>Malheuresement vous avez perdu, mais vous pouvez quand même retenter votre chance !</p>
     <img src="../../assets/croix_rouge.png">
-    <div class="bouton_rejouer">
-      <a href="index.html">Rejouer</a>
-    </div>
   </div>
 </section>
 
 <section *ngIf="!run && win">
   <div class="win">
-    <p>Bravo, vous avez fait un score de {{score}}, vous pouvez retourner à l'accueil</p>
-    <img src="../../assets/croix_rouge.png">
-    <div class="bouton_super">
-      <a href="#">Super !</a>
-    </div>
+    <p>Bravo, vous avez fait un temps de {{60-score}} secondes, vous pouvez retourner à l'accueil</p>
   </div>
 </section>
 
