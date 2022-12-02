@@ -73,6 +73,14 @@ p{
 }
 
 
+.card_img_front{
+  width: 70%;
+  height: 100%;
+  border-radius: 20px 20px 0 0 ;
+  object-fit: contain;
+  text-align: center;
+}
+
 .card_img{
   position: absolute;
   left: 0;

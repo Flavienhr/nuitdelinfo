@@ -6,6 +6,7 @@ import { AssociateComponent } from './associate/associate.component';
 import { CardComponent } from './card/card.component';
 import { CardMemoComponent } from './card-memo/card-memo.component';
 import { CardAssociateComponent } from './card-associate/card-associate.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CardAssociateComponent } from './card-associate/card-associate.componen
     AssociateComponent,
     CardComponent,
     CardMemoComponent,
-    CardAssociateComponent
+    CardAssociateComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule
