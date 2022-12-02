@@ -87,7 +87,9 @@ export class AssociateComponent {
       this.cardsList[index].halo = true;
     } else {
       this.activated = false;
-      if (this.cardsList[this.activatedCard].type != this.cardsList[index].type && this.cardsList[this.activatedCard].id == this.cardsList[index].id){
+      if (this.activatedCard == index){
+        this.cardsList[this.activatedCard].halo = false;
+      } else if (this.cardsList[this.activatedCard].type != this.cardsList[index].type && this.cardsList[this.activatedCard].id == this.cardsList[index].id){
         this.cardsList[this.activatedCard].display = false;
         this.cardsList[index].display = false;
         for (let card of this.cardsList){
