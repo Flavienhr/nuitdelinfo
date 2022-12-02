@@ -6,70 +6,43 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./associate.component.css']
 })
 export class AssociateComponent {
-  cardsList = [
-    {
-      titre: 'MST 1',
-      id:1,
-      type:"MST"
-    },
-    {
-      titre: 'MST 2',
-      id:2,
-      type:"MST"
-    },
-    {
-      titre: 'Symtome 1',
-      id:1,
-      type:"Symptome"
-    },
-    {
-      titre: 'Symptome 2',
-      id:2,
-      type:"Symptome"
-    },
-    {
-      titre: 'MST 3',
-      id:3,
-      type:"MST"
-    },
-    {
-      titre: 'MST 4',
-      id:4,
-      type:"MST"
-    },
-    {
-      titre: 'Symtome 3',
-      id:3,
-      type:"Symptome"
-    },
-    {
-      titre: 'Symptome 4',
-      id:4,
-      type:"Symptome"
-    }
-  ];
+  maladies = ['MST 1', 'MST 2', 'MST 3', 'MST 4', 'MST 1', 'MST 2', 'MST 3', 'MST 4', 'MST 1', 'MST 2', 'MST 3', 'MST 4']
+  symptome = ['SYM 1', 'SYM 2', 'SYM 3', 'SYM 4', 'SYM 1', 'SYM 2', 'SYM 3', 'SYM 4', 'SYM 1', 'SYM 2', 'SYM 3', 'SYM 4']
+  cardsList: any[];
 
-  activated: number;
+  activated: boolean;
   activatedCard: any;
 
   life: number;
   constructor() {
-    this.activated = 0;
+    this.activated = false;
     this.life = 3;
+    let i = 0;
+    this.cardsList = []
+    for (let mst of this.maladies){
+      this.cardsList.push({
+        id:i,
+        titre:mst,
+        display:true,
+        halo:false
+      });
+      i++;
+    }
   }
-  oneCardClicked(id:number, type:string){
-    if (this.activated == 0){
-      this.activated += 1;
-      this.activatedCard = {
-        id : id,
-        type : type
-      };
+  oneCardClicked(index:number){
+    if (!this.activated){
+      this.activated = true;
+      this.activatedCard = index;
+      this.cardsList[index].halo = true;
     } else {
-      this.activated = 0;
-      if (this.activatedCard.type != type && this.activatedCard.id == id){
-        alert("WIN")
+      this.activated = false;
+      if (this.cardsList[this.activatedCard].type != this.cardsList[index].type && this.cardsList[this.activatedCard].id == this.cardsList[index].id){
+        this.cardsList[this.activatedCard].display = false;
+        this.cardsList[index].display = false;
       } else {
         this.life -= 1;
+        this.cardsList[this.activatedCard].halo = false;
+        this.cardsList[index].halo = false;
       }
     }
 
