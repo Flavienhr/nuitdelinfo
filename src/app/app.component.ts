@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nuitdelinfo';
+  scores = [0, 0, 0];
+
+  SetScore(score:number, jeu:number){
+    if (this.scores[jeu] < score){
+      this.scores[jeu] = score;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,11 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  percent_text = "0%";
-  perc_text = 0;
+  @Input() percent_1: number | undefined;
+  @Input() percent_2: number | undefined;
+  @Input() percent_3: number | undefined;
 
-  setPerc(perc:number) {
-    this.perc_text = perc
-    this.percent_text = `${perc}%`
-  }
+
 }
