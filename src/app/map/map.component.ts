@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-map',
@@ -6,13 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent {
+  @Output("ShowComponent") ShowComponent: EventEmitter<string> = new EventEmitter();
   Jeu1(){
-    alert("Jeu 1")
+    this.ShowComponent.emit('game1');
   }
   Jeu2(){
-    alert("Jeu 2")
+    this.ShowComponent.emit('game2');
   }
   Jeu3(){
-    alert("Jeu 3")
+
   }
 }

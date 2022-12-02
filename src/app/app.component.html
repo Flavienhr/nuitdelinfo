@@ -1,6 +1,6 @@
 <app-navbar [percent_1]="scores[0]" [percent_2]="scores[1]" [percent_3]="scores[2]" (ShowComponent)="showComponent($event)"></app-navbar>
 
 <!--<app-home *ngIf="seeHome"></app-home>-->
-<!--<app-map *ngIf="seeMap"></app-map>-->
-<app-associate *ngIf="seeGame1"></app-associate>
+<app-map *ngIf="seeMap" (ShowComponent)="showComponent($event)"></app-map>
+<app-associate *ngIf="seeGame1" (SetScore)="SetScore(2, $event)"></app-associate>
 <app-dialogue-game *ngIf="seeGame2" (SetScore)="SetScore(1, $event)"></app-dialogue-game>

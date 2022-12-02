@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-associate',
@@ -9,6 +9,7 @@ export class AssociateComponent {
   labels = ['Le stérilet hormonal', 'Le préservatif masculin', 'Le préservatif féminin', 'L\'anneau vaginal', 'Le diaphragme', 'L’injection contraceptive', 'Le patch contraceptif', 'La pilule contraceptive', 'La pilule du lendemain']
   images = ['sterilet', 'preservatif', 'preservatif_f', 'anneau', 'diaphragme', 'injection', 'patch', 'pilule', 'pilule_lendemain']
   cardsList: any[];
+  @Output("SetScore") SetScore: EventEmitter<number> = new EventEmitter();
 
   activated: boolean;
   activatedCard: any;
@@ -101,6 +102,7 @@ export class AssociateComponent {
         clearInterval(this.interval);
         this.run = false;
         this.win = true;
+        this.SetScore.emit(this.mapScore());
       } else {
         this.life -= 1;
         this.cardsList[this.activatedCard].halo = false;
@@ -113,5 +115,13 @@ export class AssociateComponent {
       }
     }
 
+  }
+
+  mapScore(){
+    if (this.score > 50) {
+      return 100;
+    } else {
+      return Math.floor(this.score*100/50);
+    }
   }
 }
