@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { DialogueGameComponent } from './dialogue-game/dialogue-game.component';
-import { HoledTextGameComponent } from './holed-text-game/holed-text-game.component';
 
 import { AssociateComponent } from './associate/associate.component';
 import { CardAssociateComponent } from './card-associate/card-associate.component';
@@ -16,7 +15,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
 
     DialogueGameComponent,
-    HoledTextGameComponent,
 
     AssociateComponent,
     CardAssociateComponent,
