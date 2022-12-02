@@ -10,7 +10,7 @@ export class DialogueGameComponent implements OnInit {
   win = false;
   startScreen = true;
   questions = [
-    ["UNE IST C’EST QUOI ?","Infections Sexuellement Transmissibles", "Infections Solitaire Téméraire", 0],
+    ["UNE IST C’EST QUOI ?","INFECTION SEXUELLEMENT TRANSMISSIBLE", "INFECTION SOLITAIRE TEMERAIRE", 0],
     ["COMMENT SE PROTÉGER DES IST ?","UTILISER UN PRÉSERVATIF", "PRENDRE LA PILULE", 0],
     ["OÙ EST-CE QUE L’ON PEUT SE FAIRE DÉPISTER DES IST ?","À L’INFIRMERIE", "LABORATOIRE D’ANALYSES", 1],
     ["QUELLE EST L’IST LA PLUS FRÉQUENTE CHEZ LES JEUNES ?","CHLAMYDIAE", "VIH", 0],
