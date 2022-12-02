@@ -1,0 +1,11 @@
+<div class="card_div" (click)="clickable()" *ngIf="display">
+  <input type="checkbox" class="card_checkbox" [checked]="halo">
+  <div class="card_div_inner" for="card_checkbox">
+    <div class="card_div_front">
+      <img class="card_img" src="../../assets/interrogation.png">
+      <div style="height: 70%;"></div>
+      <div style="height: 30%;"><h1 class="card_title">{{titre}}</h1></div>
+    </div>
+  </div>
+</div>
+

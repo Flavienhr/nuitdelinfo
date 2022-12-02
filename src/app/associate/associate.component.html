@@ -1,0 +1,7 @@
+<div class="grid grid-cols-5">
+  <app-card-associate *ngFor="let card of cardsList; let i = index" [titre]="card.titre" [display]="card.display" [halo]="card.halo" (oneCardClicked)="oneCardClicked(i)"></app-card-associate>
+</div>
+
+<div *ngIf="life > 0"><3</div>
+<div *ngIf="life > 1"><3</div>
+<div *ngIf="life > 2"><3</div>
