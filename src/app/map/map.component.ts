@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent {
-
+  Jeu1(){
+    alert("Jeu 1")
+  }
+  Jeu2(){
+    alert("Jeu 2")
+  }
+  Jeu3(){
+    alert("Jeu 3")
+  }
 }

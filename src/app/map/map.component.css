@@ -30,3 +30,33 @@
 img:hover{
   filter:brightness(120%);
 }
+
+#txt1{
+  display: block;
+  position: absolute;
+  top:310px;
+  right: 280px;
+}
+#txt2{
+   display: block;
+   position: absolute;
+   top:300px;
+   right: 15px;
+}
+#txt3{
+    display: block;
+    position: absolute;
+    top:30px;
+    right: 105px;
+}
+
+h1{
+  transform: translateX(-160px) translateY(150px);
+  font-size: 30px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+#img1:hover > #txt1{
+  display:block;
+}
