@@ -9,7 +9,9 @@ import { CardComponent } from './card/card.component';
   declarations: [
     AppComponent,
     AssociateComponent,
-    CardComponent
+    CardComponent,
+    CardMemoComponent,
+    CardAssociateComponent
   ],
   imports: [
     BrowserModule
