@@ -59,6 +59,10 @@ export class DialogueGameComponent implements OnInit {
    this.indexAnswer = this.questions[i][3];
   }
 
+  mapScore(){
+    this.points = Math.floor(this.points*100/30);
+  }
+
   checkAnswer(i: number){
     if (this.indexAnswer == i){
       this.points++;
@@ -66,6 +70,7 @@ export class DialogueGameComponent implements OnInit {
     this.indexQuestion++;
     if (this.indexQuestion == 30){
       this.win = true;
+      this.mapScore();
       this.SetScore.emit(this.points);
     }
     else {
