@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +6,13 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  @Output("ShowComponent") ShowComponent: EventEmitter<string> = new EventEmitter();
   @Input() percent_1: number | undefined;
   @Input() percent_2: number | undefined;
   @Input() percent_3: number | undefined;
 
+  clickable(str:string){
+    this.ShowComponent.emit(str);
+  }
 
 }
