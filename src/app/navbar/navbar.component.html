@@ -2,5 +2,33 @@
   <link rel="stylesheet" href="navbar.component.css">
 </head>
 
-<div id="nav_div">
-</div>
+<body style="margin:0;">
+  <div id="nav_div">
+    <table>
+      <th style="width:10%"><a href="{{home_link}}">Home</a></th>
+      <th style="width:10%"><a href="{{game_link}}">Game</a></th>
+      <th style="width:10%"><a href="{{help_link}}">Help</a></th>
+      <th style="width:35%"></th>
+      <th class="progress_show" style="width:14%; font-size: 14pt; text-transform: uppercase; text-decoration: none; letter-spacing: 0.15em; color: white">Progression : </th>
+      <th class="progress_show" style="width:7%" class="progress_show"><div class="progress_div"><img src="../../assets/Region_1_fonce.png">
+        <div class="progress_bar_back">
+          <div class="progress_div_in" style="--percentage: 0%;">
+          </div>
+        </div>
+      </div>
+      <div class="progress_num">{{percent_text}}</div></th>
+      <th class="progress_show" style="width:7%"><div class="progress_div"><img src="../../assets/Region_2_fonce.png">
+        <div class="progress_bar_back">
+          <div class="progress_div_in" style="--percentage: 0%;">
+          </div>
+        </div></div>
+        <div class="progress_num">{{perc_text}}</div></th>
+      <th class="progress_show" style="width:7%"><div class="progress_div"><img src="../../assets/Region_3_fonce.png">
+        <div class="progress_bar_back">
+          <div class="progress_div_in" style="--percentage: 0%;">
+          </div>
+        </div></div>
+        <div class="progress_num">{{perc_text}}</div></th>
+    </table>
+  </div>
+</body>
