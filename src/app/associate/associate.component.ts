@@ -60,7 +60,8 @@ export class AssociateComponent {
         titre:label,
         isImage:false,
         display:true,
-        halo:false
+        halo:false,
+        type:"label"
       });
       i++;
     }
@@ -72,7 +73,8 @@ export class AssociateComponent {
         titre:"???",
         isImage:true,
         display:true,
-        halo:false
+        halo:false,
+        type:"image"
       });
       i++;
     }
@@ -85,7 +87,7 @@ export class AssociateComponent {
       this.cardsList[index].halo = true;
     } else {
       this.activated = false;
-      if (this.cardsList[this.activatedCard].id == this.cardsList[index].id){
+      if (this.cardsList[this.activatedCard].type != this.cardsList[index].type && this.cardsList[this.activatedCard].id == this.cardsList[index].id){
         this.cardsList[this.activatedCard].display = false;
         this.cardsList[index].display = false;
         for (let card of this.cardsList){
