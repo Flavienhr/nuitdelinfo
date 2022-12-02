@@ -41,7 +41,7 @@ p{
 }
 
 .card_div_inner:hover{
-  box-shadow: 0 0 0 10px #F2B6D7;
+  box-shadow: 0 0 0 10px #8C2D18;
 }
 
 
@@ -84,4 +84,11 @@ p{
   width: 100%;
   height: auto;
   border-radius: 50%;
+}
+
+.card_title {
+  -moz-user-select:none;
+-webkit-user-select:none;
+user-select:none;
+-ms-user-select:none;
 }
