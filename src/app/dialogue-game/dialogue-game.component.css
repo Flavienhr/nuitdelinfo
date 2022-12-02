@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&display=swap');
 *{
   font-family: Verdana;
+  color: white;
 }
 
 .dialogue{
@@ -13,7 +14,7 @@
   -ms-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background-color:lightgrey;
+  background-color:#6CA6D9;
   border-radius: 20px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -28,7 +29,7 @@
 .dialogue > button {
   margin-top: 280px;
   margin: 20px;
-  background-color: white;
+  background-color: #AED3F2;
   border-radius: 20px;
   padding: 16px 80px 16px 80px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

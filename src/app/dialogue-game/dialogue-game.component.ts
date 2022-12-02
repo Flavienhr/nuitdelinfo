@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-dialogue-game',
@@ -6,10 +6,11 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./dialogue-game.component.css']
 })
 export class DialogueGameComponent implements OnInit {
+  @Output("SetScore") SetScore: EventEmitter<number> = new EventEmitter();
   win = false;
   startScreen = true;
   questions = [
-    ["UNE IST C’EST QUOI ?","Infections Sexuellement Transmissibles", "Infections Solitaire Téméraire", 0],
+    ["UNE IST C’EST QUOI ?","INFECTION SEXUELLEMENT TRANSMISSIBLE", "INFECTION SOLITAIRE TEMERAIRE", 0],
     ["COMMENT SE PROTÉGER DES IST ?","UTILISER UN PRÉSERVATIF", "PRENDRE LA PILULE", 0],
     ["OÙ EST-CE QUE L’ON PEUT SE FAIRE DÉPISTER DES IST ?","À L’INFIRMERIE", "LABORATOIRE D’ANALYSES", 1],
     ["QUELLE EST L’IST LA PLUS FRÉQUENTE CHEZ LES JEUNES ?","CHLAMYDIAE", "VIH", 0],
@@ -58,6 +59,10 @@ export class DialogueGameComponent implements OnInit {
    this.indexAnswer = this.questions[i][3];
   }
 
+  mapScore(){
+    this.points = Math.floor(this.points*100/30);
+  }
+
   checkAnswer(i: number){
     if (this.indexAnswer == i){
       this.points++;
@@ -65,6 +70,8 @@ export class DialogueGameComponent implements OnInit {
     this.indexQuestion++;
     if (this.indexQuestion == 30){
       this.win = true;
+      this.mapScore();
+      this.SetScore.emit(this.points);
     }
     else {
       this.newQuestion(this.indexQuestion);
