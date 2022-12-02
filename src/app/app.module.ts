@@ -8,6 +8,7 @@ import { DialogueGameComponent } from './dialogue-game/dialogue-game.component';
 import { AssociateComponent } from './associate/associate.component';
 import { CardAssociateComponent } from './card-associate/card-associate.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 
     AssociateComponent,
     CardAssociateComponent,
-    NavbarComponent
+    NavbarComponent,
+    MapComponent
 
   ],
   imports: [
