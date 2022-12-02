@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-associate',
-  templateUrl: './associate.component.html',
-  styleUrls: ['./associate.component.css']
+  templateUrl: 'associate.component.html',
+  styleUrls: ['associate.component.css']
 })
 export class AssociateComponent {
   labels = ['Le stérilet hormonal', 'Le préservatif masculin', 'Le préservatif féminin', 'L\'anneau vaginal', 'Le diaphragme', 'L’injection contraceptive', 'Le patch contraceptif', 'La pilule contraceptive', 'La pilule du lendemain']
