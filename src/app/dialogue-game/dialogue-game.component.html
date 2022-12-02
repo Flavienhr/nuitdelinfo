@@ -1,0 +1,20 @@
+<div *ngIf="startScreen">
+  <h1>Bienvenue sur ce quiz !</h1>
+  <h1>Nous allons mettre tes connaissances sur les MST à rudes épreuves.</h1>
+  <button (click)="startScreen = false">Jouer</button>
+</div>
+
+<div *ngIf="!win&&!startScreen">
+<p>{{ question }}</p>
+<button (click)="checkAnswer(0)">{{firstAnswer}}</button>
+<button (click)="checkAnswer(1)">{{secondAnswer}}</button>
+<p>Vous avez : {{points}} points</p>
+</div>
+<div *ngIf="win&&!startScreen">
+  <h1>Le jeu est terminé</h1>
+  <p>Vous avez eu {{points}} sur 30.</p>
+  <p *ngIf="points<10">Vous encore encore plein de choses à apprendre !</p>
+  <p *ngIf="points>=10&&points<20"> Continuez vos efforts !</p>
+  <p *ngIf="points>=20&&points<30"> Vous êtes presque un expert !</p>
+  <p *ngIf="points==30">Vous connaissez tout sur tout !</p>
+</div>
