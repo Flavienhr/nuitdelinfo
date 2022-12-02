@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'nuitdelinfo';
   scores = [0, 0, 0];
 
-  SetScore(score:number, jeu:number){
+  SetScore(jeu:number, score:number){
     if (this.scores[jeu] < score){
       this.scores[jeu] = score;
     }

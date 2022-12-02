@@ -6,7 +6,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./dialogue-game.component.css']
 })
 export class DialogueGameComponent implements OnInit {
-  @Output("SetScore") SetScore: EventEmitter<any> = new EventEmitter();
+  @Output("SetScore") SetScore: EventEmitter<number> = new EventEmitter();
   win = false;
   startScreen = true;
   questions = [
@@ -66,7 +66,7 @@ export class DialogueGameComponent implements OnInit {
     this.indexQuestion++;
     if (this.indexQuestion == 30){
       this.win = true;
-      this.SetScore.emit();
+      this.SetScore.emit(this.points);
     }
     else {
       this.newQuestion(this.indexQuestion);

@@ -1,2 +1,2 @@
 <app-navbar [percent_1]="scores[0]" [percent_2]="scores[1]" [percent_3]="scores[2]"></app-navbar>
-<app-associate></app-associate>
+<app-dialogue-game (SetScore)="SetScore(1, $event)"></app-dialogue-game>
