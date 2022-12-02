@@ -2,6 +2,7 @@
 
 h1{
   font-family: Montserrat;
+  font-weight: bold;
 }
 
 h3{
@@ -16,8 +17,8 @@ p{
 
 .card_div{
   margin: 30px;
-  height: 300px;
-  width: 225px;
+  height: 150px;
+  width: 150px;
   perspective: 1000px;
 }
 .card_checkbox{
@@ -40,7 +41,7 @@ p{
 }
 
 .card_div_inner:hover{
-  box-shadow: 0 0 0 10px #F2B6D7;
+  box-shadow: 0 0 0 10px #8C2D18;
 }
 
 
@@ -51,8 +52,8 @@ p{
 
 .card_div_front, .card_div_back {
   position: absolute;
-  width: 225px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   padding: 20px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -64,8 +65,10 @@ p{
 }
 
 .card_div_front {
-  background-color: #bbb;
+  background-color: #F2B6D7;
   color: black;
+  justify-content: center;
+  align-items: center;
 }
 
 .card_div_back {
@@ -76,11 +79,16 @@ p{
 
 
 .card_img{
-  position: absolute;
-  left: calc(50% - 35px);
-  top: calc(50% - 90px);
-  width: 70px;
-  height: 100px;
-  border-radius: 20px 20px 0 0 ;
-  object-fit: cover;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.card_title {
+  -moz-user-select:none;
+-webkit-user-select:none;
+user-select:none;
+-ms-user-select:none;
 }
