@@ -19,7 +19,7 @@ export class AppComponent {
     }
   }
 
-  showComponent(str:string){
+    showComponent(str:any){
     this.seeHome = false;
     this.seeMap = false;
     this.seeGame1=false;

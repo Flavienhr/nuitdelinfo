@@ -9,12 +9,13 @@ import { AssociateComponent } from './associate/associate.component';
 import { CardAssociateComponent } from './card-associate/card-associate.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
+import {HomeComponent} from "./home/home.component";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
+    HomeComponent,
     DialogueGameComponent,
 
     AssociateComponent,
