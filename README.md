@@ -1,5 +1,7 @@
 # Nuitdelinfo
 
+Projet de l'equipe 127.0.0.1 pendant la nuit de l'info 2022
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
 
 ## Development server
